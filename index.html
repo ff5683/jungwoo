@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 문구</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">🔮 마법의 정우가 부르길... 🔮</p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+
+  <script>
+    const videoList = [
+      "https://youtu.be/Ee_uujKuJMI?si=0bVD-oTZoRdXtpPg",
+      "https://youtu.be/VGUSz5MbcqE?si=YbXVE7OTCMW8GcxG",
+      "https://youtu.be/d8x5Q0ILkq0?si=lIpZaLG2JxtrHSb3"
+    ];
+
+    function playRandomVideo() {
+      const randomIndex = Math.floor(Math.random() * videoList.length);
+      document.getElementById("videoFrame").src = videoList[randomIndex];
+    }
+  </script>
+</body>
+</html>
