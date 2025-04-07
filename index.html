@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>랜덤 문구</title>
-    <style>
-        body {
-            text-align: center;
-            font-size: 2rem;
-            margin-top: 20%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>랜덤 유튜브 영상</title>
+  <style>
+    body {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 5%;
+    }
+    iframe {
+      margin-top: 30px;
+      width: 560px;
+      height: 315px;
+    }
+  </style>
 </head>
 <body>
-    <p id="message">🔮 마법의 정우가 부르길... 🔮</p>
-    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+  <p id="message">🔮 마법의 NFC가 말하길... 🔮</p>
+  <button onclick="playRandomVideo()">눌러서 영상 보기</button>
+
+  <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
 
   <script>
     const videoList = [
-      "https://youtu.be/Ee_uujKuJMI?si=0bVD-oTZoRdXtpPg",
-      "https://youtu.be/VGUSz5MbcqE?si=YbXVE7OTCMW8GcxG",
-      "https://youtu.be/d8x5Q0ILkq0?si=lIpZaLG2JxtrHSb3"
+      "https://www.youtube.com/embed/Ee_uujKuJMI",
+      "https://www.youtube.com/embed/VGUSz5MbcqE",
+      "https://www.youtube.com/embed/d8x5Q0ILkq0"
     ];
 
     function playRandomVideo() {
