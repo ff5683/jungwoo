@@ -6,22 +6,51 @@
   <title>랜덤 유튜브 영상</title>
   <style>
     body {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       font-size: 2rem;
       margin-top: 5%;
     }
-    iframe {
-      margin-top: 30px;
+
+    .video-container {
       width: 560px;
       height: 315px;
+      margin-top: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .play-button {
+      margin-bottom: 10px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .play-button:hover {
+      background-color: #000;
     }
   </style>
 </head>
 <body>
   <p id="message">🔮 마법의 NFC가 말하길... 🔮</p>
-  <button onclick="playRandomVideo()">눌러서 영상 보기</button>
 
-  <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+  <!-- 영상 위에 위치한 버튼 -->
+  <button class="play-button" onclick="playRandomVideo()">🎲 마법의 정우가 부르길</button>
+
+  <!-- 영상 -->
+  <div class="video-container">
+    <iframe id="videoFrame" src="" allowfullscreen></iframe>
+  </div>
 
   <script>
     const videoList = [
